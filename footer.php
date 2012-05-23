@@ -1,5 +1,6 @@
+        </div>
 		<footer id="footer" class="source-org vcard copyright">
-			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
+			<small>.</small><br />
 		</footer>
 
 	</div>
@@ -9,18 +10,13 @@
 
 <!-- here comes the javascript -->
 
-<!-- jQuery is called via the Wordpress-friendly way via functions.php -->
-
 <!-- this is where we put our custom functions -->
 <script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 
-<!-- Asynchronous google analytics; this is the official snippet.
-	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
-	 
 <script>
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_setAccount', 'UA-29694003-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -30,7 +26,6 @@
   })();
 
 </script>
--->
 	
 </body>
 

@@ -75,9 +75,7 @@
 	device-width : Occupy full width of the screen in its current orientation
 	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
 	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width -->
-	<!-- Uncomment to use; use thoughtfully!
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	-->
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<!-- This is the traditional favicon.
@@ -96,6 +94,8 @@
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:500,600,800' rel='stylesheet' type='text/css'>
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -111,6 +111,45 @@
 
 		<header id="header">
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<div class="description"><?php bloginfo('description'); ?></div>
+            <div class="instagram">
+            <?php
+                $feed = json_decode(file_get_contents("https://api.instagram.com/v1/users/8560662/media/recent/?access_token=8560662.4b9eb00.0b472df315b14c8f948938efe7cdbf59&min_timestamp=1286323200"));
+
+                $completed = false;
+                $most_popular = false;
+
+                $i = 0;
+                while(!$completed)
+                {
+                    foreach ($feed->data as $gram) 
+                    {
+                        if ($i >= 3) continue;
+                        echo '<div class="gram">
+                                <a href="'.$gram->link.'" TARGET="_blank"><img src="'.$gram->images->low_resolution->url.'" class="image" /></a>
+                            </div>';
+                        if(!$most_popular)
+                        {
+                            $most_popular = $gram;
+                        }
+                        elseif($gram->likes->count + $gram->comments->count > $most_popular->likes->count + $most_popular->comments->count)
+                        {
+                            $most_popular = $gram;
+                        }
+
+                        $i++;
+                    }
+
+                    if(isset($feed->pagination->next_url))
+                    {
+                        $feed = json_decode(file_get_contents($feed->pagination->next_url));
+                    }
+                    else 
+                    {
+                        $completed = true;
+                    }
+                }
+            ?>
+            </div>
 		</header>
+        <div id="content">
 
