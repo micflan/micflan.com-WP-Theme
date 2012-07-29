@@ -1,3 +1,4 @@
-<footer class="meta">
+<div class="meta">
 	<time datetime="<?php echo date(DATE_W3C); ?>" pubdate class="updated"><?php the_time('F jS, Y') ?></time>
-</footer>
+    <span class="category-list"><?php the_category(',  '); ?></span>
+</div>

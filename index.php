@@ -13,7 +13,7 @@
 			</div>
 
 			<footer class="postmetadata">
-				<?php the_tags('Tags: ', ', ', '<br />'); ?>
+				
                 <div class="article-link"><a href="<?php the_permalink() ?>">Read More &amp; Comment</a></div>
 			</footer>
 

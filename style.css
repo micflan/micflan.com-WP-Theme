@@ -8,37 +8,37 @@ Version: 1
 */
 
 /*
-	HTML5 Reset Wordpress Theme :: style.css
-	----------------------------------------------------------
-	We have learned much from/been inspired by/taken code where offered from:
-	
-	Eric Meyer					:: http://ericmeyer.com
-	HTML5 Doctor				:: http://html5doctor.com
-	and the HTML5 Boilerplate	:: http://html5boilerplate.com
-	
-	Special thanks: The Wordpress theme owes its start to an empty theme authored 
-		by Chris Coyier & Jeff Starr: http://digwp.com
-	
+HTML5 Reset Wordpress Theme :: style.css
+----------------------------------------------------------
+We have learned much from/been inspired by/taken code where offered from:
+
+Eric Meyer:: http://ericmeyer.com
+HTML5 Doctor:: http://html5doctor.com
+and the HTML5 Boilerplate:: http://html5boilerplate.com
+
+Special thanks: The Wordpress theme owes its start to an empty theme authored 
+by Chris Coyier & Jeff Starr: http://digwp.com
+
 -------------------------------------------------------------------------------*/
 
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
 
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}									
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
 
 article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 
 /* Responsive images and other embedded objects
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
-   There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
+Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
+There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
 img,
 object,
 embed {max-width: 100%;}
@@ -47,7 +47,7 @@ embed {max-width: 100%;}
 html {overflow-y: scroll;}
 
 /* we use a lot of ULs that aren't bulleted. 
-	don't forget to restore the bullets within content. */
+don't forget to restore the bullets within content. */
 ul {list-style: none;}
 
 blockquote, q {quotes: none;}
@@ -73,10 +73,10 @@ hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 
 input, select {vertical-align: middle;}
 
 pre {
-	white-space: pre; /* CSS2 */
-	white-space: pre-wrap; /* CSS 2.1 */
-	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-	word-wrap: break-word; /* IE */
+white-space: pre; /* CSS2 */
+white-space: pre-wrap; /* CSS 2.1 */
+white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+word-wrap: break-word; /* IE */
 }
 
 input[type="radio"] {vertical-align: text-bottom;}
@@ -86,9 +86,9 @@ input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
 select, input, textarea {font: 99% sans-serif;}
 
 table {font-size: inherit; font: 100%;}
- 
+
 /* Accessible focus treatment
-	people.opera.com/patrickl/experiments/keyboard/test */
+people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {outline: none;}
 
 small {font-size: 85%;}
@@ -98,7 +98,7 @@ strong, th {font-weight: bold;}
 td, td img {vertical-align: top;} 
 
 /* Make sure sup and sub don't screw with your line-heights
-	gist.github.com/413930 */
+gist.github.com/413930 */
 sub, sup {font-size: 75%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
 sub {bottom: -0.25em;}
@@ -118,7 +118,7 @@ button, input, select, textarea {margin: 0;}
 
 /* make buttons play nice in IE */
 button {width: auto; overflow: visible;}
- 
+
 /* scale images in IE7 more attractively */
 .ie7 img {-ms-interpolation-mode: bicubic;}
 
@@ -145,7 +145,7 @@ a:hover {color: #69f;}
 ::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
 ::selection {background: #fcd700; color: #fff; text-shadow: none;} 
 
-/*	j.mp/webkit-tap-highlight-color */
+/*j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #fcd700;} 
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
@@ -175,17 +175,33 @@ a:active { position: relative; top: 1px; text-decoration: none; }
 .alignright { float: right; }
 .alignleft { float: left; }
 
-#header { margin-bottom: -55px; position: relative; z-index: 2; }
-#header h1 { width: 370px; float: left; } 
-#header h1 a { text-indent: -99999px; display: block; background: url('theblog2.png') center top no-repeat; position: relative; max-width: 370px; height: 308px; position: relative; top: -20px; margin-left: -35px; z-index: 2; }
+#header { margin-bottom: -55px; position: relative; z-index: 2; max-width: 960px; margin: auto;
+}
+#header h1 { width: 370px; float: left; height: 210px; } 
+#header h1 a { text-indent: -99999px; display: block; background: url('theblog2.png') center -30px no-repeat; position: relative; max-width: 370px; height: 210px; position: relative; margin-left: -35px; z-index: 2; }
+
+h2.pagetitle {
+    text-indent: 1em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid silver;
+    }
 
 #footer { text-align: center; margin-top: 40px; padding-top: 20px; }
 
 #page-wrap { max-width: 960px; margin: 0 auto; }
+#header-wrap {
+width: 100%;
+margin: 0;
+background: white;
+overflow: hidden;
+margin-top: -27px;
+box-shadow: 0 0 25px -5px #222;
+}
 
 .post { margin-left: 28.2%; margin-right: 30px; clear: both; margin-bottom: 50px; padding-bottom: 50px; border-bottom: 1px solid #888; position: relative; z-index: 22; }
 
-.post h2 { font-size: 25px; color: #333; text-decoration: none; margin-bottom: 0px; margin-left: -20%; margin-top: 40px; }
+.post h2 { font-size: 25px; color: #333; text-decoration: none; margin-bottom: 0px; margin-left: -20%; margin-top: 40px; line-height: normal; }
 .post h2 a { font-size: inherit; color: #333; text-decoration: none; display: block; }
 .post h2 a:hover,
 .post h2 a:active,
@@ -202,16 +218,16 @@ a:active { position: relative; top: 1px; text-decoration: none; }
 .entry a:hover {}
 .entry iframe { width: 100%; height: 400px; }
 .entry ul {
-    list-style: disc;
-    margin-left: 20px;
+list-style: disc;
+margin-left: 20px;
 }
 .entry ul li {
-    margin-left: 20px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+margin-left: 20px;
+margin-bottom: 15px;
+margin-top: 15px;
 }
 
-.meta { font-size: smaller; text-align: right; margin-bottom: 20px; font-style: italic;}
+.meta { font-size: smaller; margin-left: -20%; margin-bottom: 20px; font-style: italic;}
 .postmetadata { clear: both; }
 
 #sidebar {}
@@ -228,7 +244,7 @@ a:active { position: relative; top: 1px; text-decoration: none; }
 #commentform { margin: 20px; }
 
 #commentform textarea { width: 100%; margin-top: 1em; }
-	
+
 ol.commentlist {list-style: none; margin-right: 28.2%; }
 ol.commentlist li { margin-bottom: 10px; }
 ol.commentlist li.alt {}
@@ -271,6 +287,68 @@ ol.commentlist li.thread-even {}
 ol.commentlist li.thread-odd {}
 
 
+.instagram {
+overflow: hidden;
+}
+
+.instagram .gram {
+display: block;
+float: left;
+width: 175px;
+margin: 30px 10px 0;}
+
+.instagram .gram a {
+}
+
+.instagram .gram a img {
+width: 100%;
+}
+
+.instagram .tweet .tweet_time {
+display: block;
+font-size: 10px;
+background: url('twitter_bird24.png') 10px 5px no-repeat;
+height: 30px;
+line-height: 35px;
+text-indent: 43px;
+}
+
+.instagram .tweet .tweet_list {
+background: #F1F1F1;
+border-radius: 10px;
+height: 171px;
+overflow: hidden;
+margin-top: 3px;
+}
+
+.instagram .tweet .tweet_list .tweet_text {
+padding: 4px 8px;
+font-size: small;
+display: block;
+}
+
+blockquote {
+margin-left: 40px;
+background: white;
+padding: 10px 30px;
+font-family: cursive;
+font-size: larger;
+font-style: italic;
+}
+
+#categories-list {
+float: left;
+display: block;
+width: 175px;
+margin-top: 13px;
+}
+
+#categories-list ul {
+padding: 40px 0 0 30px;
+}
+
+.category-list { padding-left: 5px; }
+
 /* Print styles!
 -------------------------------------------------------------------------------*/
 @media print {
@@ -284,33 +362,62 @@ ol.commentlist li.thread-odd {}
 -------------------------------------------------------------------------------*/
 
 /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
-	
-		
+@media all and (max-width: 935px) {
+
+.instagram {
+display: none;
+}
+
+#header {
+margin-bottom: 0;
+}
+
+}
+
+@media all and (max-width: 545px) {
+#categories-list {
+width: auto;
+float: none;
+clear: both;
+}
+
+#categories-list {
+position: relative;
+margin-left: 35px;
+}
+
+
+#categories-list ul {
+padding: 0;
+}
+
+#categories-list ul li {
+padding: 0;
+padding-right: 10px;
+display: inline-block;
+line-height: 2em;
+}
+
+.post { 
+margin-left: 8%;
+}
+
+.post h2,
+.post .meta {
+margin-left: 0px;
+}
+
+blockquote {
+margin-left: 0;
+}
+
 }
 
 @media all and (orientation: portrait) {
-	
+
 }
 
 @media all and (orientation: landscape) {
-	
+
 }
 
-.instagram {
-    overflow: hidden;
-}
-
-.instagram .gram {
-    display: block;
-    float: left;
-    width: 175px;
-    margin: 50px 10px 0
-}
-
-.instagram .gram a {
-}
-
-.instagram .gram a img {
-    width: 100%;
-}

@@ -106,12 +106,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
-	<div id="page-wrap"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 
+    <div id="header-wrap">
+	
 		<header id="header">
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+
+            <div id="categories-list">
+                <ul>
+                   <?php wp_list_categories('show_count=1&title_li=&orderby=count&order=DESC'); ?>
+                </ul>
+            </div>
             <div class="instagram">
+                <div class="gram tweet">
+                    </div>
             <?php
                 $feed = json_decode(file_get_contents("https://api.instagram.com/v1/users/8560662/media/recent/?access_token=8560662.4b9eb00.0b472df315b14c8f948938efe7cdbf59&min_timestamp=1286323200"));
 
@@ -123,7 +131,7 @@
                 {
                     foreach ($feed->data as $gram) 
                     {
-                        if ($i >= 3) continue;
+                        if ($i >= 1) continue;
                         echo '<div class="gram">
                                 <a href="'.$gram->link.'" TARGET="_blank"><img src="'.$gram->images->low_resolution->url.'" class="image" /></a>
                             </div>';
@@ -151,5 +159,10 @@
             ?>
             </div>
 		</header>
+
+    </div>
+
+	<div id="page-wrap"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
+
         <div id="content">
 
