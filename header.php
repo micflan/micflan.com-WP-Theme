@@ -109,56 +109,13 @@
 
     <div id="header-wrap">
 	
-		<header id="header">
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-
-            <div id="categories-list">
-                <ul>
+            <div class="heroWrap">
+                <h1>The infrequent blogging of <span><a href="/">Michael Flanagan</a></span></h1>
+		<ul<?=is_home() ? '' : ' class="hideme"'?>>
                    <?php wp_list_categories('show_count=1&title_li=&orderby=count&order=DESC'); ?>
-                </ul>
+			<li><br /><a href="http://michael.flanagan.ie/">About / Contact</a></li>
+		</ul>
             </div>
-            <div class="instagram">
-                <div class="gram tweet">
-                    </div>
-            <?php
-                $feed = json_decode(file_get_contents("https://api.instagram.com/v1/users/8560662/media/recent/?access_token=8560662.4b9eb00.0b472df315b14c8f948938efe7cdbf59&min_timestamp=1286323200"));
-
-                $completed = false;
-                $most_popular = false;
-
-                $i = 0;
-                while(!$completed)
-                {
-                    foreach ($feed->data as $gram) 
-                    {
-                        if ($i >= 1) continue;
-                        echo '<div class="gram">
-                                <a href="'.$gram->link.'" TARGET="_blank"><img src="'.$gram->images->low_resolution->url.'" class="image" /></a>
-                            </div>';
-                        if(!$most_popular)
-                        {
-                            $most_popular = $gram;
-                        }
-                        elseif($gram->likes->count + $gram->comments->count > $most_popular->likes->count + $most_popular->comments->count)
-                        {
-                            $most_popular = $gram;
-                        }
-
-                        $i++;
-                    }
-
-                    if(isset($feed->pagination->next_url))
-                    {
-                        $feed = json_decode(file_get_contents($feed->pagination->next_url));
-                    }
-                    else 
-                    {
-                        $completed = true;
-                    }
-                }
-            ?>
-            </div>
-		</header>
 
     </div>
 

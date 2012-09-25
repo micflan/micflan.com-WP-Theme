@@ -156,7 +156,7 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
 
-body { background: #ececec; font-family: 'Open Sans', sans-serif; font-size: 14px; color: #333; }
+body { background: #fff; }
 
 p { margin: 20px 0; }
 
@@ -175,10 +175,47 @@ a:active { position: relative; top: 1px; text-decoration: none; }
 .alignright { float: right; }
 .alignleft { float: left; }
 
-#header { margin-bottom: -55px; position: relative; z-index: 2; max-width: 960px; margin: auto;
+#header-wrap { clear: both;  }
+
+#header-wrap {
+    text-align: center;
+    margin: 22px auto 50px;
+    width: 85%;
+    max-width: 750px;
+font-family: sans-serif;
+font-size: 100%;
 }
-#header h1 { width: 370px; float: left; height: 210px; } 
-#header h1 a { text-indent: -99999px; display: block; background: url('theblog_simples.png') center 10px no-repeat; position: relative; max-width: 370px; height: 210px; position: relative; margin-left: -35px; z-index: 2; }
+
+#header-wrap h1 {
+font-family: sans-serif;
+line-height: 1.4;
+}
+
+#header-wrap h1 span {
+display: block;
+font-size: 2em;
+}
+
+.heroWrap {
+    padding: 25px;
+    background: #e3e3e3;
+    border-radius: 10px;
+}
+
+.heroWrap h1 {
+    max-width: 550px;
+margin: 0.67em 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heroWrap ul.hideme {
+display: none;
+}
+
+.heroWrap:hover ul.hideme {
+display: block;
+}
 
 h2.pagetitle {
     text-indent: 1em;
@@ -189,19 +226,24 @@ h2.pagetitle {
 
 #footer { text-align: center; margin-top: 40px; padding-top: 20px; }
 
-#page-wrap { max-width: 960px; margin: 0 auto; }
 #header-wrap {
-width: 100%;
-margin: 0;
-background: white;
-overflow: hidden;
-margin-top: -27px;
-box-shadow: 0 0 25px -5px #222;
 }
 
-.post { margin-left: 28.2%; margin-right: 30px; clear: both; margin-bottom: 50px; padding-bottom: 50px; border-bottom: 1px solid #888; position: relative; z-index: 22; }
 
-.post h2 { font-size: 25px; color: #333; text-decoration: none; margin-bottom: 0px; margin-left: -20%; margin-top: 40px; line-height: normal; }
+#content { background: #eee;
+border-radius: 25px;
+z-index: 99;
+max-width: 850px;
+margin: auto;
+overflow: hidden;
+ font-family: 'Open Sans', sans-serif; font-size: 14px; color: #333;
+}
+
+
+
+.post { margin: 8% 10%; clear: both; margin-bottom: 50px; padding-bottom: 50px; border-bottom: 1px solid #888; position: relative; z-index: 22; }
+
+.post h2 { font-size: 25px; color: #333; text-decoration: none; margin-bottom: 0px; margin-top: 40px; line-height: normal; }
 .post h2 a { font-size: inherit; color: #333; text-decoration: none; display: block; }
 .post h2 a:hover,
 .post h2 a:active,
@@ -227,14 +269,28 @@ margin-bottom: 15px;
 margin-top: 15px;
 }
 
-.meta { font-size: smaller; margin-left: -20%; margin-bottom: 20px; font-style: italic;}
+.meta { font-size: smaller; margin-bottom: 20px; font-style: italic;}
 .postmetadata { clear: both; }
 
 #sidebar {}
 
 .navgation {}
-.next-posts {}
-.prev-posts {}
+.next-posts a,
+.prev-posts a {
+width: 50%;
+float: right;
+text-align: center;
+background: #E3E3E3;
+display: block;
+line-height: 3.5em;
+border-top: 1px solid silver;
+}
+.next-posts a{
+float: left;
+}
+
+.next-posts a:hover,
+.prev-posts a:hover { background: #eee; }
 
 #searchform {}
 #s {}

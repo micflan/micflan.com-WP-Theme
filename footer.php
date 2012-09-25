@@ -13,18 +13,6 @@
 <!-- this is where we put our custom functions -->
 <script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 
-<script type="text/javascript" src="http://static.extension.fm/exfm.js?user=micflan"></script>
-
-<script type"text/javascript" src="<?php bloginfo('template_directory'); ?>/tweetscript/tweet/jquery.tweet.js"></script>
-<script>
-jQuery(function($) {
-    $(".tweet").tweet({
-        username: "micflan",
-        count: 1,
-        loading_text: "loading tweets..."
-    });
-});
- </script>
 
 <script>
 
