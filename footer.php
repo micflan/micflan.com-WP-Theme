@@ -1,6 +1,6 @@
         </div>
-		<footer id="footer" class="source-org vcard copyright">
-			<small>.</small><br />
+		<footer id="footer">
+			<small>don't be a dick.</small>
 		</footer>
 
 	</div>

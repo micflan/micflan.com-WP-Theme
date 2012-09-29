@@ -179,7 +179,7 @@ a:active { position: relative; top: 1px; text-decoration: none; }
 
 #header-wrap {
     text-align: center;
-    margin: 22px auto 50px;
+    margin: 50px auto;
     width: 85%;
     max-width: 750px;
 font-family: sans-serif;
@@ -230,7 +230,7 @@ h2.pagetitle {
 }
 
 
-#content { background: #eee;
+#content { background: #e3e3e3;
 border-radius: 25px;
 z-index: 99;
 max-width: 850px;
@@ -241,9 +241,9 @@ overflow: hidden;
 
 
 
-.post { margin: 8% 10%; clear: both; margin-bottom: 50px; padding-bottom: 50px; border-bottom: 1px solid #888; position: relative; z-index: 22; }
+.post { margin: 4% 5%; padding: 4% 5%; clear: both; margin-bottom: 50px; border-bottom: 1px solid #888; position: relative; z-index: 22; border-radius: 10px; background: #f1f1f1; }
 
-.post h2 { font-size: 25px; color: #333; text-decoration: none; margin-bottom: 0px; margin-top: 40px; line-height: normal; }
+.post h2 { font-size: 25px; color: #333; text-decoration: none; margin-bottom: 0px; line-height: normal; }
 .post h2 a { font-size: inherit; color: #333; text-decoration: none; display: block; }
 .post h2 a:hover,
 .post h2 a:active,
@@ -455,7 +455,8 @@ line-height: 2em;
 }
 
 .post { 
-margin-left: 8%;
+margin-left: 0;
+margin-right: 0;
 }
 
 .post h2,
