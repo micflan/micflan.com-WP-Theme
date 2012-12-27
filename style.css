@@ -156,7 +156,7 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
 
-body { background: #fff; }
+body { background: #E3E3E3; }
 
 p { margin: 20px 0; }
 
@@ -239,7 +239,12 @@ overflow: hidden;
  font-family: 'Open Sans', sans-serif; font-size: 14px; color: #333;
 }
 
-
+h2.pagetitle { 
+text-align: center;
+font-weight: normal;
+font-size: large;
+padding: 2em 0 1.5em;
+}
 
 .post { margin: 4% 5%; padding: 4% 5%; clear: both; margin-bottom: 50px; border-bottom: 1px solid #888; position: relative; z-index: 22; border-radius: 10px; background: #f1f1f1; }
 
@@ -250,7 +255,7 @@ overflow: hidden;
 .post h2 a:focus { color: #000888; }
 
 .post .article-link, 
-.post .article-link a { color: #767aba; text-align: right; margin-top: 20px; }
+.post .article-link a { color: silver; text-decoration: none; text-align: right; margin-top: 20px; }
 
 .entry {}
 .entry img {  }
@@ -258,7 +263,12 @@ overflow: hidden;
 .entry img.alignleft { margin: 20px 20px 20px 0;  }
 .entry a {}
 .entry a:hover {}
-.entry iframe { width: 100%; height: 400px; }
+.entry iframe { height: 400px;
+border-radius: 20px;
+margin: 30px auto;
+border: 20px solid silver;
+width: 85%;
+display: block; }
 .entry ul {
 list-style: disc;
 margin-left: 20px;
@@ -276,21 +286,25 @@ margin-top: 15px;
 
 .navgation {}
 .next-posts a,
-.prev-posts a {
+.prev-posts a,
+.next-posts a:hover,
+.prev-posts a:hover {
 width: 50%;
 float: right;
 text-align: center;
-background: #E3E3E3;
+background: #EEE;
 display: block;
 line-height: 3.5em;
 border-top: 1px solid silver;
+text-decoration: none; 
 }
-.next-posts a{
+.next-posts a,
+.next-posts a:hover {
 float: left;
 }
 
-.next-posts a:hover,
-.prev-posts a:hover { background: #eee; }
+.prev-posts a:hover { text-indent: 10px; }
+.next-posts a:hover { text-indent: -10px; }
 
 #searchform {}
 #s {}
