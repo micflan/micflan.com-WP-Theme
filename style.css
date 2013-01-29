@@ -50,6 +50,8 @@ html {overflow-y: scroll;}
 don't forget to restore the bullets within content. */
 ul {list-style: none;}
 
+h3 { font-size: larger; }
+
 blockquote, q {quotes: none;}
 
 blockquote:before, 
@@ -156,7 +158,7 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
 
-body { background: #E3E3E3; }
+body { background: #E3E3E3; padding-bottom: 30px; }
 
 p { margin: 20px 0; }
 
@@ -179,7 +181,7 @@ a:active { position: relative; top: 1px; text-decoration: none; }
 
 #header-wrap {
     text-align: center;
-    margin: 50px auto;
+    margin: 50px auto 0;
     width: 85%;
     max-width: 750px;
 font-family: sans-serif;
@@ -246,7 +248,7 @@ font-size: large;
 padding: 2em 0 1.5em;
 }
 
-.post { margin: 4% 5%; padding: 4% 5%; clear: both; margin-bottom: 50px; border-bottom: 1px solid #888; position: relative; z-index: 22; border-radius: 10px; background: #f1f1f1; }
+.post { margin: 4% 5%; padding: 4% 5%; clear: both; margin-bottom: 50px; -webkit-box-shadow: 0 1px 2px #888; -moz-box-shadow: 0 1px 2px #888; box-shadow: 0 1px 2px #888; position: relative; z-index: 22; border-radius: 10px; background: #f1f1f1; }
 
 .post h2 { font-size: 25px; color: #333; text-decoration: none; margin-bottom: 0px; line-height: normal; }
 .post h2 a { font-size: inherit; color: #333; text-decoration: none; display: block; }
@@ -292,10 +294,8 @@ margin-top: 15px;
 width: 50%;
 float: right;
 text-align: center;
-background: #EEE;
 display: block;
 line-height: 3.5em;
-border-top: 1px solid silver;
 text-decoration: none; 
 }
 .next-posts a,
@@ -401,8 +401,6 @@ blockquote {
 margin-left: 40px;
 background: white;
 padding: 10px 30px;
-font-family: cursive;
-font-size: larger;
 font-style: italic;
 }
 

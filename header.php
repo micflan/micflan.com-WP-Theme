@@ -110,8 +110,9 @@
     <div id="header-wrap">
 	
             <div class="heroWrap">
-                <h1>The infrequent blogging of <span><a href="/">Michael Flanagan</a></span></h1>
-		<ul<?=is_home() ? '' : ' class="hideme"'?>>
+                <h1 style="color: #8f8f8f; text-shadow: 0 1px 2px #fff">The infrequent blogging of <span><a style="color: #222;" href="/">Michael Flanagan</a></span></h1>
+		<p style="color: #8f8f8f; text-shadow: 0 1px 2px #fff">web developer. day dreamer. intp.</p>
+		<ul class="hideme">
                    <?php wp_list_categories('show_count=1&title_li=&orderby=count&order=DESC'); ?>
 			<li><br /><a href="http://michael.flanagan.ie/">About / Contact</a></li>
 		</ul>
