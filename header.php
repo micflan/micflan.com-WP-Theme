@@ -90,6 +90,7 @@
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 	
 	<!-- CSS: screen, mobile & print are all in the same file -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
@@ -110,8 +111,8 @@
     <div id="header-wrap">
 	
             <div class="heroWrap">
-                <h1 style="color: #f1f1f1; text-shadow: 0 1px 2px #222">The infrequent blogging of <span><a style="color: #f1f1f1;" href="/">Michael Flanagan</a></span></h1>
-		<p style="color: #f1f1f1; text-shadow: 0 1px 2px #222">web developer. day dreamer. intp.</p>
+                <h1>The infrequent blogging of <a href="/">Michael Flanagan</a></h1>
+		<p>web developer. day dreamer. intp.</p>
 		<ul class="hideme">
                    <?php wp_list_categories('show_count=1&title_li=&orderby=count&order=DESC'); ?>
 			<li><br /><a href="http://michael.flanagan.ie/">About / Contact</a></li>
